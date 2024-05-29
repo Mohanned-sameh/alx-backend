@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Task 1: Basic Flask app
-"""
+'''Task 0: Basic Flask app
+'''
 
 from flask import Flask, render_template
 from flask_babel import Babel
 
 
 class Config:
-    """Config class"""
+    '''Config class'''
 
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
@@ -21,12 +21,10 @@ app.url_map.strict_slashes = False
 babel = Babel(app)
 
 
-@app.route("/")
+@app.route('/')
 def index():
-    """default route"""
-    return render_template(
-        "1-index.html",
-    )
+    '''default route'''
+    return render_template("1-index.html",)
 
 
 if __name__ == "__main__":

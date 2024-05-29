@@ -1,29 +1,17 @@
 #!/usr/bin/env python3
-"""
-Basic flask setup
-    - app: instance of the Flask class
-    - __name__: name of the current function
-"""
+'''Task 0: Basic Flask app
+'''
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
-"""
-home route
-    - return the home template
-"""
 
-
-@app.route("/")
-def hello_world():
-    """
-    return the home template
-    """
-    return render_template("0-index.html")
+@app.route('/')
+def index():
+    '''default route'''
+    return render_template("0-index.html",)
 
 
 if __name__ == "__main__":
-    """
-    Main Function
-    """
-    app.run(host="127.0.0.1", port=5000)
+    app.run(debug=True)
