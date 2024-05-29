@@ -32,7 +32,7 @@ def get_locale():
 def index():
     """default route"""
     return render_template(
-        "1-index.html",
+        "2-index.html",
     )
 
 
